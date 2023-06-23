@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header header header"
+        "cont cont cont"
+        "footer footer footer";
+}
+
+/**
+* TODO: ESTILOS DEL HEADER
+*/
+
+header {
+    grid-area: header;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90px;
+    background: #13322B;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #13322B;
+    height: 150px;
+    transition: .5s ease-in-out;
+}
+
+.head-logo {
+    width: 100%;
+    height: 70%;
+    background-color: #0C231E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-logo img {
+    width: 240px;
+    transition: .5s ease-in-out;
+}
+
+.abajo .head-logo img {
+    width: 150px;
+    transition: .5s ease-in-out;
+}
+
+.nav-links {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    transition: .2s linear;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar a:hover {
+    color: #9B8A3A;
+}
+
+.navbar .logo {
+    font-weight: 300;
+    filter: drop-shadow(0 0 3px black);
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+    transition: all .3s;
+    padding: 10px 0;
+}
+
+.abajo {
+    transition: .5s ease-in-out;
+    z-index: 1000;
+    height: 120px;
+}
+
+.abajo .head-logo {
+    height: 60%;
+}
+
+.abajo .nav-links ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    transition: .2s;
+    font-weight: 200;
+}
+
+.abajo .nav-links ul li a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #9D2449;
+    display: block;
+    transition: all .3s;
+}
+
+.abajo .nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+.abajo #logo {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-weight: 300;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    width: 35px;
+}
+
+.info {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    flex-wrap: wrap;
+    padding: 0 180px;
+}
+
+.contacto {
+    width: 50%;
+    padding: 20px;
+    height: auto;
+}
+
+.contacto h1 {
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.contacto h4 {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.contacto form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto form label {
+    margin: 0 10px;
+    width: calc(100% - 20px);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.contacto form input {
+    width: calc(100% - 20px);
+    border: none;
+    border-bottom: 2px solid black;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+.contacto button {
+    margin: 20px 0;
+    height: 40px;
+    width: 100px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contacto button:hover {
+    background: rgb(36, 36, 36);
+}
+
+.horario {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+
+.horario iframe {
+    width: 100%;
+}
+
+.horario h1 {
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    width: 100%;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+.horario p {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 0;
+}
+
+.horario .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 60px 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.5s ease;
+}
+
+.horario .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.horario i {
+    font-size: 25px;
+}
+
+/**
+* TODO: ESTILOS DEL BODY 
+*/
+
+main {
+    grid-area: cont;
+    height: auto;
+}
+
+.banner {
+    background: url(http://cetis45.edu.mx/imagenes/principal.jpg);
+    height: 360px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.nombre-cetis {
+    background: #9d2449;
+    color: #d4c19c;
+    text-align: center;
+    padding: 14px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 1px;
+}
+
+.subtitulos {
+    padding: 40px 180px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.subtitulos h2 {
+    font-size: 30px;
+}
+
+.line {
+    border-top: 1px solid rgb(0, 0, 0, 0.2);
+    width: 100%;
+    height: 1px;
+}
+
+.line2 {
+    border: 2px solid #9B8A3A;
+    height: 1px;
+    width: 5%;
+}
+
+.inscripciones {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 180px;
+    background-color: #2d846e;
+    color: white;
+    margin: 20px 0;
+}
+
+.text-inscripciones {
+    width: 50%;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    padding: 40px;
+}
+
+.text-inscripciones h1 {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.text-inscripciones p {
+    margin: 20px 0;
+    font-size: 18px
+}
+
+.text-inscripciones span {
+    font-weight: bolder;
+    font-size: 18px;
+    display: block;
+    margin: 20px 0;
+}
+
+.text-inscripciones a {
+    display: inline-block;
+    margin: 20px 0;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    transition: .5s ease-out;
+}
+
+.text-inscripciones a:hover {
+    width: 220px;
+    transition: .5s ease-in-out;
+    background: #1F6050;
+    border: none;
+}
+
+.img-inscripciones {
+    width: 50%;
+    height: 500px;
+    padding: 40px;
+}
+
+.img-inscripciones img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quienes {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 180px;
+}
+
+.text-quienes {
+    width: 50%;
+    height: 500px;
+    font-family: 'Nunito', sans-serif;
+    padding: 60px 40px;
+}
+
+.text-quienes p {
+    margin: 20px 0;
+    font-size: 20px
+}
+
+.img-quienes {
+    width: 50%;
+    height: 500px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-quienes img {
+    width: 400px;
+    height: 80px;
+}
+
+.especialidades {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 180px;
+}
+
+.especialidad {
+    width: 30%;
+    height: 350px;
+    margin: 15px;
+}
+
+.especialidad a {
+    color: black;
+}
+
+.especialidad a:hover {
+    text-decoration: underline;
+}
+
+.especialidad img {
+    width: 100%;
+    height: 80%;
+}
+
+.especialidad h2 {
+    display: inline-block;
+    width: 100%;
+    height: 20%;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.aspirantes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 180px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.paso1 {
+    width: 96.5%;
+    height: 200px;
+    margin: 10px 0;
+    background: #EEEEEE;
+}
+
+.pasos {
+    width: 31%;
+    height: 200px;
+    margin: 10px;
+    background: #EEEEEE;
+}
+
+.aspirantes h1 {
+    background: #AAC6FF;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+.aspirantes p  {
+    font-size: 18px;
+    padding: 15px;
+}
+
+.alumnos {
+    width: 100%;
+    padding: 0 180px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-alumnos {
+    width: 30%;
+    margin: 10px;
+    height: 200px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.sub-alumnos h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.sub-alumnos p {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/** 
+* TODO: ESTILOS DEL FOOTER
+*/
+
+footer {
+    grid-area: footer;
+    background: #13322B;
+    position: relative;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    margin-bottom: 50px
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    padding: 70px 0;
+    z-index: 10;
+}
+
+.footer-col {
+    width: 20%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.fa-facebook-f:hover {
+    color: #3b5998;
+}
+
+.fa-twitter:hover {
+    color: #00aced;
+}
+
+.fa-youtube:hover {
+    color: #FF0000;
+}
+
+.fa-pinterest:hover {
+    color: #E60023;
+}
+
+.fa-instagram:hover {
+    color: #bc2a8d;
+}
+
+.fa-google:hover {
+    color: #dd4b39;
+}
+
+.footer-col .logo-footer {
+    width: 300px;
+    height: 170px,
+}
+
+.footer-bottom {
+    background: #0D0D0D;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+.footer-bottom a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/**
+* ? USO DE MEDIAQUERIES
+*/
+
+@media screen and (max-width: 900px) {
+    header {
+        height: 1px;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .navbar {
+        padding: 0;
+        height: auto;
+    }
+
+    .abajo {
+        background: rgba(255, 255, 255, 0.648);
+    }
+
+    .abajo .nav-links ul li a {
+        color: rgb(0, 0, 0);
+    }
+
+    .abajo .logo {
+        display: none;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 180px;
+        height: 80px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-hamburger {
+        display: flex;
+        flex-direction: column;
+        width: 3rem;
+        height: 3rem;
+        border: 0;
+        background: transparent;
+        filter: drop-shadow(0 0 1px black);
+    }
+
+    .menu-hamburger>div {
+        background: rgb(255, 255, 255);
+        height: 2px;
+        width: 100%;
+        border-radius: 5px;
+        transition: all .5s;
+        transform-origin: right;
+        margin: 10px 0;
+    }
+
+    .menu-hamburger:hover div:first-child {
+        transform: rotate(-45deg);
+    }
+
+    .menu-hamburger:hover div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-hamburger:hover div:last-child {
+        transform: rotate(45deg);
+    }
+
+    .nav-links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(225, 225, 225, 0.20);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    .banner {
+        width: 100%;
+        height: 200px;
+    }
+
+    .subtitulos {
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+
+    .inscripciones {
+        padding: 0 20px;
+        height: auto;
+    }
+
+    .text-inscripciones {
+        width: 100%;
+    }
+
+    .img-inscripciones {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-inscripciones img {
+        height: 200px;
+    }
+
+    .quienes {
+        padding: 60px 20px;
+    }
+
+    .text-quienes {
+        width: 100%;
+        padding: 0;
+    }
+
+    .img-quienes {
+        width: 100%;
+        padding: 20px 40px;
+        height: auto;
+    }
+
+    .img-quienes img {
+        width: 100%;
+    }
+    
+    .especialidades {
+        padding: 0;
+    }
+
+    .especialidad {
+        width: 100%;
+    }
+
+    .aspirantes {
+        padding: 0 20px;
+    }
+
+    .paso1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .pasos {
+        width: 100%;
+        height: auto;
+    }
+
+    .alumnos {
+        padding: 0 20px;
+    }
+
+    .sub-alumnos {
+        width: 100%;
+    }
+
+    .info .contacto {
+        width: 100%;
+        padding: 20px;
+        background: white;
+    }
+
+    .contacto h1 {
+        font-size: 30px;
+    }
+
+    .info {
+        padding: 0 20px;
+    }
+
+    .info .horario {
+        width: 100%;
+        padding: 20px;
+        margin: 20px 0;
+        background: white;
+    }
+
+    .horario h1 {
+        font-size: 30px;
+    }
+
+    .horario .social-links a {
+        margin: 30px 0;
+    }
+}
